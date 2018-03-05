@@ -1,10 +1,10 @@
 # FROM ubuntu:16.04
 FROM golang:1.10.0
 
-MAINTAINER Tamás Benke <tombenke@gmail.com>
+MAINTAINER Tamás Benke <tombenke@gmail.com>, Ahmed Magdy <ahmed.magdy@quadric.net>
 
-## See also: https://github.com/compose/transporter/releases/tag/v0.4.0-rc.1
-ENV TRANSPORTER_VERSION 0.4.0-rc.1
+## See also: https://github.com/compose/transporter/releases/
+ENV TRANSPORTER_VERSION 0.5.2
 ENV TRANSPORTER_PLATFORM linux-amd64
 ENV TRANSPORTER_DOWNLOAD_URI https://github.com/compose/transporter/releases/download/v${TRANSPORTER_VERSION}/transporter-${TRANSPORTER_VERSION}-${TRANSPORTER_PLATFORM}
 
