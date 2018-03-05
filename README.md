@@ -1,5 +1,6 @@
-mongo-to-es-transporter
-=======================
+# Compose Transporter docker image
+
+---
 
 ## About
 
@@ -19,24 +20,24 @@ See also the [mongo-bi](https://github.com/tombenke/mongo-bi) project as an exam
 
 The configuration parameters for build:
 
-- `TRANSPORTER_VERSION`: The version of the transporter to use. Default is `0.4.0-rc.1`.
+- `TRANSPORTER_VERSION`: The version of the transporter to use. Default is `0.5.2`.
 - `TRANSPORTER_PLATFORM`: The platform the transporter was built. Default is `linux-amd64`.
 
-See also [the transporter releases](https://github.com/compose/transporter/releases/tag/v0.4.0-rc.1)
+See also [the transporter releases](https://github.com/compose/transporter/releases)
 for further details on versions and platforms.
 
 Build the image with the default configuration:
 
 ```bash
-    docker build -t tombenke/mongo-to-es-transporter:latest .
+docker build -t quadric/compose-transporter-docker:0.5.2 .
 ```
 
 Build the image with different versions and/or platforms:
 
 ```bash
-    export TRANSPORTER_VERSION=<version>
-    export TRANSPORTER_VERSION=<platform>
-    docker build -t tombenke/mongo-to-es-transporter:latest .
+export TRANSPORTER_VERSION=<version>
+export TRANSPORTER_VERSION=<platform>
+docker build -t quadric/compose-transporter-docker:${TRANSPORTER_VERSION} .
 ```
 
 ## Run
@@ -52,14 +53,12 @@ The configuration parameters for run:
   Use one of the following formats: `http://<user>:password@host:port` or `http://host:port`.
   Default: `http://localhost:9200`.
 
-
 ```bash
-    docker run -it --rm tombenke/mongo-to-es-transporter:latest
+docker run -it --rm tombenke/mongo-to-es-transporter:latest
 ```
 
-
 ## References
+
 - [Elasticsearch: The Definitive Guide 2.x](https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html)
 - [5 ways to synchronize data from MongoDb to ElasticSearch](https://www.linkedin.com/pulse/5-way-sync-data-from-mongodb-es-kai-hao)
 - [compose/transporter](https://github.com/compose/transporter/)
-
