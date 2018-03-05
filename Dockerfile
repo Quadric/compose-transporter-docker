@@ -1,4 +1,5 @@
-FROM ubuntu:16.04
+# FROM ubuntu:16.04
+FROM golang:1.10.0
 
 MAINTAINER Tamás Benke <tombenke@gmail.com>
 
